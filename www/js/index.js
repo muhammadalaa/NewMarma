@@ -972,7 +972,7 @@ bemandoobbtn.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
         return;
     }
     if (licenseimghdn.val()) { } else {
@@ -981,7 +981,7 @@ bemandoobbtn.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
         return;
     }
     if (joinreasontb.val()) {
@@ -1091,7 +1091,7 @@ addPlaygroundbtn.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
         return;
     }
     if (pgpricetb.val()) { } else {
@@ -1100,7 +1100,7 @@ addPlaygroundbtn.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
         return;
     }
     if (pgcapacityselect.val()) { } else {
@@ -1109,7 +1109,7 @@ addPlaygroundbtn.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
         return;
     }
     if (pgaddressta.val()) { } else {
@@ -1118,7 +1118,7 @@ addPlaygroundbtn.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
         return;
     }
     if (playground_google_lathdn.val() && playground_google_lnghdn.val()) { } else {
@@ -1127,7 +1127,7 @@ addPlaygroundbtn.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
         return;
     }
 
@@ -1179,7 +1179,7 @@ addPlaygroundbtn.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
     }
 
 });
@@ -1191,7 +1191,7 @@ choosepgaddimglnk.click(function () {
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
-        }, function (b) { });
+        }, function (b) { alert(b); });
     }
 
     navigator.camera.getPicture(GetPGImgData, function (message) {
@@ -1214,23 +1214,23 @@ function GetPGImgData(imageURI) {
 
                         } else {
                             pgaddimghdn5.val(base64Image);
-                            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="txtwhite" onclick="return DeletePgImage(this, 5)">حذف الصورة</a></div>');
+                            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 5)">حذف الصورة</a></div>');
                         }
                     } else {
                         pgaddimghdn4.val(base64Image);
-                        pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="txtwhite" onclick="return DeletePgImage(this, 4)">حذف الصورة</a></div>');
+                        pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 4)">حذف الصورة</a></div>');
                     }
                 } else {
                     pgaddimghdn3.val(base64Image);
-                    pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="txtwhite" onclick="return DeletePgImage(this, 3)">حذف الصورة</a></div>');
+                    pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 3)">حذف الصورة</a></div>');
                 }
             } else {
                 pgaddimghdn2.val(base64Image);
-                pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="txtwhite" onclick="return DeletePgImage(this, 2)">حذف الصورة</a></div>');
+                pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 2)">حذف الصورة</a></div>');
             }
         } else {
             pgaddimghdn1.val(base64Image);
-            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="txtwhite" onclick="return DeletePgImage(this, 1)">حذف الصورة</a></div>');
+            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 1)">حذف الصورة</a></div>');
         }
         // Then you'll be able to handle the myimage.png file as base64
         
