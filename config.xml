@@ -7,7 +7,11 @@
     <author email="support@alatheertech.com" href="http://alatheertech.com">
     alatheertech
   </author>
+    <engine name="android" spec="~7.0.0" />
+    <engine name="ios" spec="~4.5.4" />
+    <engine name="browser" spec="^5.0.3" />
     <content src="index.html" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="StatusBarOverlaysWebView" value="false" />
@@ -111,6 +115,4 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
         <string>need photo library access to get pictures from there</string>
     </edit-config>
-    <engine name="android" spec="~7.0.0" />
-    <engine name="ios" spec="~4.5.4" />
 </widget>
