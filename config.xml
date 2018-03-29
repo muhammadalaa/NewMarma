@@ -40,10 +40,7 @@
     <plugin name="phonegap-plugin-push" spec="^2.1.1">
         <variable name="FCM_VERSION" value="11.0.1" />
     </plugin>
-    <icon height="1024" src="icon.jpg" width="1024" />
-    <icon height="1024" src="icon.png" width="1024" />
-    <splash src="resources/screen.png" />
-    <splash src="resources/screen.jpg" />
+    
 	<gap:plugin name="cordova-plugin-x-toast" source="npm" />
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>100</string>
