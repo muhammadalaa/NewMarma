@@ -9,8 +9,8 @@
   </author>
     <engine name="android" spec="~7.0.0" />
     <engine name="ios" spec="~4.5.4" />
-    <engine name="browser" spec="^5.0.3" />
     <content src="index.html" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="StatusBarOverlaysWebView" value="false" />
@@ -33,6 +33,10 @@
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.3" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <plugin name="cordova-plugin-x-toast" spec="^2.6.2" />
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.2" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <plugin name="phonegap-plugin-push" spec="^2.1.1">
         <variable name="FCM_VERSION" value="11.0.1" />
     </plugin>
@@ -40,6 +44,7 @@
     <icon height="1024" src="icon.png" width="1024" />
     <splash src="resources/screen.png" />
     <splash src="resources/screen.jpg" />
+	<gap:plugin name="cordova-plugin-x-toast" source="npm" />
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>100</string>
     </gap:config-file>

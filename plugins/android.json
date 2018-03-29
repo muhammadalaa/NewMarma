@@ -28,6 +28,12 @@
     "phonegap-plugin-push": {
       "FCM_VERSION": "11.0.1",
       "PACKAGE_NAME": "com.alatheertech.marma"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.alatheertech.marma"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.alatheertech.marma"
     }
   },
   "dependent_plugins": {}
