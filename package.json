@@ -1,0 +1,35 @@
+{
+  "name": "com.alatheertech.marma",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "displayName": "Marma",
+  "dependencies": {
+    "cordova-android": "^7.0.0",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-camera": "^4.0.2",
+    "cordova-plugin-console": "~1.0.3",
+    "cordova-plugin-dialogs": "~1.2.1",
+    "cordova-plugin-fcm": "^2.1.2",
+    "cordova-plugin-statusbar": "~2.1.3",
+    "cordova-plugin-whitelist": "~1.2.1",
+    "cordova-plugin-x-toast": "^2.6.2",
+    "phonegap-plugin-push": "^2.1.1"
+  },
+  "cordova": {
+    "plugins": {
+      "phonegap-plugin-push": {
+        "FCM_VERSION": "11.0.1"
+      },
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
