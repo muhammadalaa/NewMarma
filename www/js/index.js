@@ -1206,7 +1206,7 @@ choosepgaddimglnk.click(function () {
 function GetPGImgData(imageURI) {
     getFileContentAsBase64(imageURI, function (base64Image) {
         //window.open(base64Image);
-        if (pgaddimghdn1.val()){
+        if (pgaddimghdn1.val()) {
             if (pgaddimghdn2.val()) {
                 if (pgaddimghdn3.val()) {
                     if (pgaddimghdn4.val()) {
@@ -1214,30 +1214,31 @@ function GetPGImgData(imageURI) {
 
                         } else {
                             pgaddimghdn5.val(base64Image);
-                            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 5)">حذف الصورة</a></div>');
+                            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 5)">حذف الصورة</a></div>');
                         }
                     } else {
                         pgaddimghdn4.val(base64Image);
-                        pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 4)">حذف الصورة</a></div>');
+                        pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 4)">حذف الصورة</a></div>');
                     }
                 } else {
                     pgaddimghdn3.val(base64Image);
-                    pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 3)">حذف الصورة</a></div>');
+                    pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 3)">حذف الصورة</a></div>');
                 }
             } else {
                 pgaddimghdn2.val(base64Image);
-                pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 2)">حذف الصورة</a></div>');
+                pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 2)">حذف الصورة</a></div>');
             }
         } else {
             pgaddimghdn1.val(base64Image);
-            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 1)">حذف الصورة</a></div>');
+            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 1)">حذف الصورة</a></div>');
         }
         // Then you'll be able to handle the myimage.png file as base64
-        
+
     });
 }
 
-function DeletePgImage(a,indx) {
+function DeletePgImage(aa, indx) {
+    $(aa).closeset('div').remove();
     switch (indx) {
         case 1:
             pgaddimghdn1.val('');
@@ -1256,7 +1257,6 @@ function DeletePgImage(a,indx) {
             break;
         default:
             break;
-            $(a).parent().remove();
     }
     return false;
 }
