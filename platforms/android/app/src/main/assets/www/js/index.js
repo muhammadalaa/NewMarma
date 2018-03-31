@@ -1209,8 +1209,12 @@ addPlaygroundbtn.click(function () {
 });
 
 choosepgaddimglnk.click(function () {
-    alert('bbb');
-    window.plugins.toast.show('Token:', 'long', 'center', function (a) { console.log('toast success: ' + a) }, function (b) { alert('hi'); });
+    window.plugins.toast.show({
+        message: 'أقصى عدد للصور هو 5 صور',
+        duration: "short", // 2000 ms
+        position: "bottom",
+        styling: stle
+    }, function (b) { alert(b); });
 
     if (pgaddimghdn1.val() && pgaddimghdn2.val() && pgaddimghdn3.val() && pgaddimghdn4.val() && pgaddimghdn5.val()) {
         window.plugins.toast.show({
@@ -1271,7 +1275,6 @@ function GetPGImgData(imageURI) {
 }
 
 function DeletePgImage(aa, indx) {
-    $(aa).closeset('div').remove();
     switch (indx) {
         case 1:
             pgimage1.attr('src', 'img/chooseimg.png');
