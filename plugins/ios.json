@@ -16,6 +16,12 @@
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.alatheertech.marma"
     },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.alatheertech.marma"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.alatheertech.marma"
+    },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.alatheertech.marma"
     },
@@ -26,12 +32,6 @@
       "PACKAGE_NAME": "com.alatheertech.marma"
     },
     "phonegap-plugin-push": {
-      "PACKAGE_NAME": "com.alatheertech.marma"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.alatheertech.marma"
-    },
-    "cordova-plugin-file": {
       "PACKAGE_NAME": "com.alatheertech.marma"
     }
   },

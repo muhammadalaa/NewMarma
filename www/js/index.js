@@ -110,6 +110,16 @@ var pgaddimghdn5 = $('#pgaddimghdn5');
 var canceladdpg = $('#canceladdpg');
 var playground_google_lathdn = $('#playground_google_lathdn');
 var playground_google_lnghdn = $('#playground_google_lnghdn');
+var pgimage1 = $('#pgimage1');
+var pgimage2 = $('#pgimage2');
+var pgimage3 = $('#pgimage3');
+var pgimage4 = $('#pgimage4');
+var pgimage5 = $('#pgimage5');
+var delimgbtn1 = $('#delimgbtn1');
+var delimgbtn2 = $('#delimgbtn2');
+var delimgbtn3 = $('#delimgbtn3');
+var delimgbtn4 = $('#delimgbtn4');
+var delimgbtn5 = $('#delimgbtn5');
 var playground_id_pk;
 var mandoobordersLst;
 var app = {
@@ -246,7 +256,7 @@ skipbtn.click(skiploginregister);
 skipbtn2.click(skiploginregister);
 skipbtn3.click(skiploginregister);
 
-regbtn.click(function () {
+regbtn.click(function () {  
     logindiv.hide();
     rusernametb.val('');
     rpasswordtb.val('');
@@ -460,6 +470,7 @@ userloginbtn.click(function () {
                             ShowMandoobPage();
                         }
                     } else {
+                        
                         navigator.notification.alert('عذرا ولكن البيانات التي قمت بادخالها غير صحيحة!', null, 'خطأ', 'موافق');
                     }
                 }, error: function (a, e, d) {
@@ -953,8 +964,21 @@ addplayground.click(function () {
     pgaddressta.val('');
     pgphonetb.val('');
     pgcapacityselect.val(1);
-    pgaddimgspreviewdiv.html('');
-
+    pgimage1.attr('src', 'img/chooseimg.png');
+    pgimage1.hide(); delimgbtn1.hide();
+    pgaddimghdn1.val('');
+    pgimage2.attr('src', 'img/chooseimg.png');
+    pgimage2.hide(); delimgbtn2.hide();
+    pgaddimghdn2.val('');
+    pgimage3.attr('src', 'img/chooseimg.png');
+    pgimage3.hide(); delimgbtn3.hide();
+    pgaddimghdn3.val('');
+    pgimage4.attr('src', 'img/chooseimg.png');
+    pgimage4.hide(); delimgbtn4.hide();
+    pgaddimghdn4.val('');
+    pgimage5.attr('src', 'img/chooseimg.png');
+    pgimage5.hide(); delimgbtn5.hide();
+    pgaddimghdn5.val('');
 });
 var stle = {
     opacity: 0.75, // 0.0 (transparent) to 1.0 (opaque). Default 0.8
@@ -1185,13 +1209,16 @@ addPlaygroundbtn.click(function () {
 });
 
 choosepgaddimglnk.click(function () {
-    if (pgaddimgspreviewdiv.find('img').length == 5) {
+    window.plugins.toast.show('Token:', 'long', 'center', function (a) { console.log('toast success: ' + a) }, function (b) { alert('hi'); });
+
+    if (pgaddimghdn1.val() && pgaddimghdn2.val() && pgaddimghdn3.val() && pgaddimghdn4.val() && pgaddimghdn5.val()) {
         window.plugins.toast.show({
             message: 'أقصى عدد للصور هو 5 صور',
             duration: "short", // 2000 ms
             position: "bottom",
             styling: stle
         }, function (b) { alert(b); });
+        return;
     }
 
     navigator.camera.getPicture(GetPGImgData, function (message) {
@@ -1214,23 +1241,28 @@ function GetPGImgData(imageURI) {
 
                         } else {
                             pgaddimghdn5.val(base64Image);
-                            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 5)">حذف الصورة</a></div>');
+                            pgimage5.attr('src', base64Image);
+                            pgimage5.show(); delimgbtn5.show();
                         }
                     } else {
                         pgaddimghdn4.val(base64Image);
-                        pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 4)">حذف الصورة</a></div>');
+                        pgimage4.attr('src', base64Image);
+                        pgimage4.show(); delimgbtn4.show();
                     }
                 } else {
                     pgaddimghdn3.val(base64Image);
-                    pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 3)">حذف الصورة</a></div>');
+                    pgimage3.attr('src', base64Image);
+                    pgimage3.show(); delimgbtn3.show();
                 }
             } else {
                 pgaddimghdn2.val(base64Image);
-                pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 2)">حذف الصورة</a></div>');
+                pgimage2.attr('src', base64Image);
+                pgimage2.show(); delimgbtn2.show();
             }
         } else {
             pgaddimghdn1.val(base64Image);
-            pgaddimgspreviewdiv.append('<div><img src="' + base64Image + '" width="120" /><br/><a href="#" class="btn btn-danger txtwhite" onclick="return DeletePgImage(this, 1)">حذف الصورة</a></div>');
+            pgimage1.attr('src', base64Image);
+            pgimage1.show(); delimgbtn1.show();
         }
         // Then you'll be able to handle the myimage.png file as base64
 
@@ -1238,21 +1270,30 @@ function GetPGImgData(imageURI) {
 }
 
 function DeletePgImage(aa, indx) {
-    $(aa).closeset('div').remove();
     switch (indx) {
         case 1:
+            pgimage1.attr('src', 'img/chooseimg.png');
+            pgimage1.hide(); delimgbtn1.hide();
             pgaddimghdn1.val('');
             break;
         case 2:
+            pgimage2.attr('src', 'img/chooseimg.png');
+            pgimage2.hide(); delimgbtn2.hide();
             pgaddimghdn2.val('');
             break;
         case 3:
+            pgimage3.attr('src', 'img/chooseimg.png');
+            pgimage3.hide(); delimgbtn3.hide();
             pgaddimghdn3.val('');
             break;
         case 4:
+            pgimage4.attr('src', 'img/chooseimg.png');
+            pgimage4.hide(); delimgbtn4.hide();
             pgaddimghdn4.val('');
             break;
         case 5:
+            pgimage5.attr('src', 'img/chooseimg.png');
+            pgimage5.hide(); delimgbtn5.hide();
             pgaddimghdn5.val('');
             break;
         default:
