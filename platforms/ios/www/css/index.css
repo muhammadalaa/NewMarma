@@ -47,11 +47,11 @@ body {
     -webkit-user-select: none;
     text-transform: uppercase;
     /* prevent copy paste, to allow, change 'none' to 'text' */
-    background: url("../img/bg.png") repeat-y center center fixed;
+    background: url("../img/bg.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: 100vw 100vh;
     -webkit-touch-callout: none;
     /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;

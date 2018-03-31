@@ -991,21 +991,11 @@ var stle = {
 };
 bemandoobbtn.click(function () {
     if (personalimghdn.val()) { } else {
-        window.plugins.toast.show({
-            message: 'من فضلك اختار الصورة الشخصية',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('من فضلك اختار الصورة الشخصية', 'long', 'center', function (b) { navigator.notification.alert('من فضلك اختار الصورة الشخصية', null, 'خطأ', 'موافق'); });
         return;
     }
     if (licenseimghdn.val()) { } else {
-        window.plugins.toast.show({
-            message: 'من فضلك اختار الصورة الرخصة',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('من فضلك اختار الصورة الرخصة', 'long', 'center', function (b) { navigator.notification.alert('من فضلك اختار الصورة الرخصة', null, 'خطأ', 'موافق'); });
         return;
     }
     if (joinreasontb.val()) {
@@ -1034,12 +1024,7 @@ bemandoobbtn.click(function () {
             }
         });
     } else {
-        window.plugins.toast.show({
-            message: 'من فضلك أدخل سبب الانضمام',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { });
+        window.plugins.toast.show('من فضلك أدخل سبب الانضمام', 'long', 'center', function (b) { navigator.notification.alert('من فضلك أدخل سبب الانضمام', null, 'خطأ', 'موافق'); });
     }
 });
 
@@ -1110,48 +1095,23 @@ function getFileContentAsBase64(path, callback) {
 }
 addPlaygroundbtn.click(function () {
     if (pgnametb.val()) { } else {
-        window.plugins.toast.show({
-            message: 'من فضلك أدخل اسم الملعب',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('من فضلك أدخل اسم الملعب', 'long', 'center', function (b) { navigator.notification.alert('من فضلك أدخل اسم الملعب', null, 'خطأ', 'موافق'); });
         return;
     }
     if (pgpricetb.val()) { } else {
-        window.plugins.toast.show({
-            message: 'من فضلك أدخل السعر',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('من فضلك أدخل السعر', 'long', 'center', function (b) { navigator.notification.alert('من فضلك أدخل السعر', null, 'خطأ', 'موافق'); });
         return;
     }
     if (pgcapacityselect.val()) { } else {
-        window.plugins.toast.show({
-            message: 'من فضلك اختر سعة الملعب',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('من فضلك اختر سعة الملعب', 'long', 'center', function (b) { navigator.notification.alert('من فضلك اختر سعة الملعب', null, 'خطأ', 'موافق'); });
         return;
     }
     if (pgaddressta.val()) { } else {
-        window.plugins.toast.show({
-            message: 'من فضلك أدخل العنوان',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('من فضلك أدخل العنوان', 'long', 'center', function (b) { navigator.notification.alert('من فضلك أدخل العنوان', null, 'خطأ', 'موافق'); });
         return;
     }
     if (playground_google_lathdn.val() && playground_google_lnghdn.val()) { } else {
-        window.plugins.toast.show({
-            message: 'من فضلك حدد موقع الملعب',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('من فضلك حدد موقع الملعب', 'long', 'center', function (b) { navigator.notification.alert('من فضلك حدد موقع الملعب', null, 'خطأ', 'موافق'); });
         return;
     }
 
@@ -1198,31 +1158,17 @@ addPlaygroundbtn.click(function () {
             }
         });
     } else {
-        window.plugins.toast.show({
-            message: 'لابد من اختيار صورتين على الاقل',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('لابد من اختيار صورتين على الاقل', 'long', 'center', function (b) { navigator.notification.alert('لابد من اختيار صورتين على الاقل', null, 'خطأ', 'موافق'); });
+        
     }
 
 });
 
 choosepgaddimglnk.click(function () {
-    window.plugins.toast.show({
-        message: 'أقصى عدد للصور هو 5 صور',
-        duration: "short", // 2000 ms
-        position: "bottom",
-        styling: stle
-    }, function (b) { alert(b); });
+    
 
     if (pgaddimghdn1.val() && pgaddimghdn2.val() && pgaddimghdn3.val() && pgaddimghdn4.val() && pgaddimghdn5.val()) {
-        window.plugins.toast.show({
-            message: 'أقصى عدد للصور هو 5 صور',
-            duration: "short", // 2000 ms
-            position: "bottom",
-            styling: stle
-        }, function (b) { alert(b); });
+        window.plugins.toast.show('أقصى عدد للصور هو 5 صور', 'long', 'center', function (b) { navigator.notification.alert('أقصى عدد للصور هو 5 صور', null, 'خطأ', 'موافق'); });
         return;
     }
 
