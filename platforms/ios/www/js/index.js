@@ -1,22 +1,4 @@
-﻿/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-
+﻿
 var lat = 27.5162591;
 var lng = 41.7342923;
 
@@ -120,6 +102,7 @@ var delimgbtn2 = $('#delimgbtn2');
 var delimgbtn3 = $('#delimgbtn3');
 var delimgbtn4 = $('#delimgbtn4');
 var delimgbtn5 = $('#delimgbtn5');
+var searchpgtxt = $('#searchpgtxt');
 var playground_id_pk;
 var mandoobordersLst;
 var app = {
@@ -256,7 +239,7 @@ skipbtn.click(skiploginregister);
 skipbtn2.click(skiploginregister);
 skipbtn3.click(skiploginregister);
 
-regbtn.click(function () {  
+regbtn.click(function () {
     logindiv.hide();
     rusernametb.val('');
     rpasswordtb.val('');
@@ -470,7 +453,7 @@ userloginbtn.click(function () {
                             ShowMandoobPage();
                         }
                     } else {
-                        
+
                         navigator.notification.alert('عذرا ولكن البيانات التي قمت بادخالها غير صحيحة!', null, 'خطأ', 'موافق');
                     }
                 }, error: function (a, e, d) {
@@ -588,6 +571,11 @@ function ShowPlaygrounds(txtval) {
                 } else {
                     navigator.notification.alert('عذرا ولكن تعذر تحميل بيانات الملاعب!', null, 'خطأ', 'موافق');
                 }
+                setTimeout(function () {
+                    searchpgtxt.focus();
+                    var fldLength = searchpgtxt.val().length;
+                    searchpgtxt[0].setSelectionRange(fldLength, fldLength);
+                }, 600);
             }, error: function (a, e, d) {
                 //ProgressIndicator.hide();
                 SetLoading(false);
@@ -991,11 +979,11 @@ var stle = {
 };
 bemandoobbtn.click(function () {
     if (personalimghdn.val()) { } else {
-        window.plugins.toast.show('من فضلك اختار الصورة الشخصية', 'long', 'center', function (b) { navigator.notification.alert('من فضلك اختار الصورة الشخصية', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('من فضلك اختار الصورة الشخصية', 'long', 'center', function (b) { });
         return;
     }
     if (licenseimghdn.val()) { } else {
-        window.plugins.toast.show('من فضلك اختار الصورة الرخصة', 'long', 'center', function (b) { navigator.notification.alert('من فضلك اختار الصورة الرخصة', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('من فضلك اختار الصورة الرخصة', 'long', 'center', function (b) { });
         return;
     }
     if (joinreasontb.val()) {
@@ -1024,7 +1012,7 @@ bemandoobbtn.click(function () {
             }
         });
     } else {
-        window.plugins.toast.show('من فضلك أدخل سبب الانضمام', 'long', 'center', function (b) { navigator.notification.alert('من فضلك أدخل سبب الانضمام', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('من فضلك أدخل سبب الانضمام', 'long', 'center', function (b) { });
     }
 });
 
@@ -1095,23 +1083,23 @@ function getFileContentAsBase64(path, callback) {
 }
 addPlaygroundbtn.click(function () {
     if (pgnametb.val()) { } else {
-        window.plugins.toast.show('من فضلك أدخل اسم الملعب', 'long', 'center', function (b) { navigator.notification.alert('من فضلك أدخل اسم الملعب', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('من فضلك أدخل اسم الملعب', 'long', 'center', function (b) { });
         return;
     }
     if (pgpricetb.val()) { } else {
-        window.plugins.toast.show('من فضلك أدخل السعر', 'long', 'center', function (b) { navigator.notification.alert('من فضلك أدخل السعر', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('من فضلك أدخل السعر', 'long', 'center', function (b) { });
         return;
     }
     if (pgcapacityselect.val()) { } else {
-        window.plugins.toast.show('من فضلك اختر سعة الملعب', 'long', 'center', function (b) { navigator.notification.alert('من فضلك اختر سعة الملعب', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('من فضلك اختر سعة الملعب', 'long', 'center', function (b) { });
         return;
     }
     if (pgaddressta.val()) { } else {
-        window.plugins.toast.show('من فضلك أدخل العنوان', 'long', 'center', function (b) { navigator.notification.alert('من فضلك أدخل العنوان', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('من فضلك أدخل العنوان', 'long', 'center', function (b) { });
         return;
     }
     if (playground_google_lathdn.val() && playground_google_lnghdn.val()) { } else {
-        window.plugins.toast.show('من فضلك حدد موقع الملعب', 'long', 'center', function (b) { navigator.notification.alert('من فضلك حدد موقع الملعب', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('من فضلك حدد موقع الملعب', 'long', 'center', function (b) { });
         return;
     }
 
@@ -1158,17 +1146,17 @@ addPlaygroundbtn.click(function () {
             }
         });
     } else {
-        window.plugins.toast.show('لابد من اختيار صورتين على الاقل', 'long', 'center', function (b) { navigator.notification.alert('لابد من اختيار صورتين على الاقل', null, 'خطأ', 'موافق'); });
-        
+        window.plugins.toast.show('لابد من اختيار صورتين على الاقل', 'long', 'center', function (b) { });
+
     }
 
 });
 
 choosepgaddimglnk.click(function () {
-    
+
 
     if (pgaddimghdn1.val() && pgaddimghdn2.val() && pgaddimghdn3.val() && pgaddimghdn4.val() && pgaddimghdn5.val()) {
-        window.plugins.toast.show('أقصى عدد للصور هو 5 صور', 'long', 'center', function (b) { navigator.notification.alert('أقصى عدد للصور هو 5 صور', null, 'خطأ', 'موافق'); });
+        window.plugins.toast.show('أقصى عدد للصور هو 5 صور', 'long', 'center', function (b) { });
         return;
     }
 
@@ -1275,10 +1263,11 @@ function initLocationPicker() {
 $(document).ready(function () {
 
     $('#searchpgtxt').typeWatch({
-        wait: 2000,
+        wait: 1500,
         captureLength: 1,
         callback: function (value) {
             ShowPlaygrounds(value);
+            
         }
     });
     initLocationPicker();

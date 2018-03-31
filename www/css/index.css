@@ -1,21 +1,3 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 
 @font-face {
     font-family: 'DroidArabicKufiBold';
@@ -58,12 +40,14 @@ body {
     direction: rtl;
 }
 
-#indexdiv, #mandoobordersdiv, #mandoobselectdiv, #playgrounddetailsdiv, #playgroundpicturesdiv, #playgroundsdiv, #registerdiv ,#bemandoobDiv,#addPlaygrounddiv{
+#indexdiv, #mandoobordersdiv, #mandoobselectdiv, #playgrounddetailsdiv, #playgroundpicturesdiv, #playgroundsdiv, #registerdiv, #bemandoobDiv, #addPlaygrounddiv {
     display: none;
 }
+
 #playgroundslistdiv_content {
-overflow:hidden;
+    overflow: hidden;
 }
+
 .txtwhite {
     color: #ffffff;
 }
@@ -74,6 +58,9 @@ overflow:hidden;
 
 .pt-1 {
     padding-top: 1px;
+}
+.p-1 {
+    padding: 10px;
 }
 
 .mndblblcell {
@@ -198,7 +185,7 @@ overflow:hidden;
     height: 70vh;
     overflow-x: hidden;
     overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 .panel {
@@ -212,7 +199,8 @@ overflow:hidden;
 }
 
 .srchgrpbox {
-    display: inline-flex;width: 100%;
+    display: inline-flex;
+    width: 100%;
 }
 
 .pgitem a div span {
@@ -230,19 +218,20 @@ overflow:hidden;
 }
 
 .dtpicker {
-    position: absolute;
+    /*position: absolute;
     z-index: 99;
     left: 0;
     width: 45%;
-    margin-left: 4%;
+    margin-left: 4%;*/
     background: url("../img/datepickerbg.png") no-repeat center top;
-    background-size: 100% 130px;
+    /*background-size: 100% 130px;*/
+    text-align:center;
 }
 
 .pgimg {
-    position: absolute;
+    /*position: absolute;
     left: 0;
-    margin-left: 35%;
+    margin-left: 35%;*/
 }
 
 .pgname {
@@ -254,7 +243,7 @@ overflow:hidden;
 
     .pgname span {
         display: block;
-        margin-top: 65%;
+        /*margin-top: 65%;*/
     }
 
 .nopadding {
@@ -266,18 +255,17 @@ overflow:hidden;
 }
 
 .dtpickeritem {
-    float: left;
-    width: 40%;
-    margin: 3% 8%;
+    width: 100%;
+    margin: 7px auto;
 }
 
 .dtpickeritemslct {
-    float: left;
-    margin: 2% 5%;
+    /*float: left;
+    margin: 2% 5%;*/
 }
 
 .hourslct {
-    margin-left: 17%;
+    text-align: center;
 }
 
     .hourslct input {
@@ -297,12 +285,14 @@ overflow:hidden;
     margin: 25px auto;
     border-bottom: 1px solid #cdd118;
 }
+
 .button {
-width: 200px;
+    width: 200px;
     margin: 10px auto;
     float: none;
     background: #cdd118;
 }
+
 .totalprice {
     text-align: center;
 }
@@ -331,14 +321,16 @@ width: 200px;
 }
 
 .pgditem {
-    float: right;
-    margin: 10%;
+    /*float: right;
+    margin: 10%;*/
+    text-align:center;
+    padding: 25px;
 }
 
 .boldyellow {
     font-weight: bold;
     display: block;
-    width: 100px;
+    /*width: 100px;*/
     padding: 10px;
     text-align: center;
     color: #cdd118;
@@ -347,18 +339,20 @@ width: 200px;
 }
 
 .ico {
-    margin: 0 70%;
+    /*margin: 0 70%;*/
 }
 
 .maplnk {
     display: block;
-    margin: 30% 73%;
+    margin-top: 10px;
+    /*margin: 30% 73%;*/
 }
 
 .desctxt {
     display: block;
-    width: 100px;
-    margin: 35% 29%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Landscape layout (with min-width) */
@@ -475,7 +469,7 @@ h1 {
 #playgroundsdiv {
     position: relative;
     height: 100vh;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
 
 .marma_nav {
@@ -488,6 +482,7 @@ h1 {
     background: #075568 !important;
     height: 40px;
 }
+
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
     background-color: #0d787b;
     border-radius: 55%;
@@ -495,16 +490,18 @@ h1 {
     margin: 10px auto;
     padding: 17px;
 }
+
 .nav-tabs > li.active {
     height: 70px;
     margin-top: -25px;
     background: #075568;
     border-radius: 55%;
 }
-    .marma_nav li {
-        float: right;
-        border: none !important;
-    }
+
+.marma_nav li {
+    float: right;
+    border: none !important;
+}
 
 .nav > li > a {
     font-size: 13px;
@@ -557,9 +554,32 @@ a:focus, a:hover {
     margin-bottom: 25px;
     background: #ffffff;
 }
+
 .tab-content {
     height: 70vh;
     overflow-x: hidden;
     overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+}
+
+.emptydiv {
+    height: 40px;
+    display:block;
+    float:none;
+    clear: both;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #075568;
+}
+
+#playgroundpicsdiv {
+    overflow-y: scroll;
+    height: 73vh;
+    overflow-x: hidden;
+}
+
+.pgdetailsscroll {
+    overflow-y: scroll;
+    height: 73vh;
+    overflow-x: hidden;
 }
