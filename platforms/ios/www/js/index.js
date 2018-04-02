@@ -1208,7 +1208,7 @@ function GetPGImgData(imageURI) {
     });
 }
 
-function DeletePgImage(aa, indx) {
+function DeletePgImage(indx) {
     switch (indx) {
         case 1:
             pgimage1.attr('src', 'img/chooseimg.png');

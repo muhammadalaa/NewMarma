@@ -583,3 +583,9 @@ a:focus, a:hover {
     height: 73vh;
     overflow-x: hidden;
 }
+.pgimgdiv{
+	margin:12px;
+}
+.txtcenter{
+	text-align:center;
+}

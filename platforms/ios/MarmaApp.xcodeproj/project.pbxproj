@@ -27,7 +27,6 @@
 		E49DE4C726BF41BC874CAD9B /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B404799024487BBEE797A /* CDVNotification.m */; };
 		5CCDE6EF50D6400BAC2479FF /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47CC92FD089D4E1B9D029849 /* CDVNotification.bundle */; };
 		0F7A3D13ECC249EAA412B5CD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055CC891B30D4FE3AB6CBFB0 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		84EFF62575674C13B489C8DB /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A214F13D31C4423D9D8B5AF0 /* CDVStatusBar.m */; };
 		64C25AC34B4342BA909D2A4B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 697B60BBB98D47DD86433CEF /* Toast+UIView.m */; };
 		FF288D0830164807900E7BEC /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C922136C8A41F8B13EEC01 /* Toast.m */; };
 		2C112C1E3E244483B1EFCAA6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED58CAF13F24016811DC2D5 /* QuartzCore.framework */; };
@@ -38,6 +37,7 @@
 		5DC7E92DFA28473DBDE431CF /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF54C5F7645DD9208BB0C /* CDVFile.m */; };
 		79FD208AEE0148F484C77911 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A461F014B65340EFB0E076F8 /* CDVLocalFilesystem.m */; };
 		74B022EDBA9C49F19DA584A8 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 115A22BFB1894559A81337BC /* CDVAssetLibraryFilesystem.m */; };
+		22D67420DA1540638701B02B /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C9162AF6AF4B2FB2453055 /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +95,6 @@
 		32F714ADF68D4A55BFD2BD24 /* CDVNotification.h */ = {isa = PBXFileReference; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		47CC92FD089D4E1B9D029849 /* CDVNotification.bundle */ = {isa = PBXFileReference; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
 		055CC891B30D4FE3AB6CBFB0 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		A214F13D31C4423D9D8B5AF0 /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		9A6DABD131EF4B65AFE84D07 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		697B60BBB98D47DD86433CEF /* Toast+UIView.m */ = {isa = PBXFileReference; name = "Toast+UIView.m"; path = "cordova-plugin-x-toast/Toast+UIView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		29C922136C8A41F8B13EEC01 /* Toast.m */ = {isa = PBXFileReference; name = "Toast.m"; path = "cordova-plugin-x-toast/Toast.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		2E4F3806592A4486826E77D4 /* Toast+UIView.h */ = {isa = PBXFileReference; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
@@ -116,6 +114,8 @@
 		C3B6952927B24DF18E55CB59 /* CDVFile.h */ = {isa = PBXFileReference; name = "CDVFile.h"; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		F6AB03C34F1F47608A104DAC /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.h"; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		5A893B30086B483C93AB4E2F /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.h"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A2C9162AF6AF4B2FB2453055 /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0939B8CBA719471D8A6C2890 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,8 +242,6 @@
 				2ED19D9EE6CE445D80451AED /* CDVLogger.h */,
 				496B404799024487BBEE797A /* CDVNotification.m */,
 				32F714ADF68D4A55BFD2BD24 /* CDVNotification.h */,
-				A214F13D31C4423D9D8B5AF0 /* CDVStatusBar.m */,
-				9A6DABD131EF4B65AFE84D07 /* CDVStatusBar.h */,
 				697B60BBB98D47DD86433CEF /* Toast+UIView.m */,
 				29C922136C8A41F8B13EEC01 /* Toast.m */,
 				2E4F3806592A4486826E77D4 /* Toast+UIView.h */,
@@ -262,6 +260,8 @@
 				C3B6952927B24DF18E55CB59 /* CDVFile.h */,
 				F6AB03C34F1F47608A104DAC /* CDVLocalFilesystem.h */,
 				5A893B30086B483C93AB4E2F /* CDVAssetLibraryFilesystem.h */,
+				A2C9162AF6AF4B2FB2453055 /* CDVStatusBar.m */,
+				0939B8CBA719471D8A6C2890 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = "MarmaApp/Plugins";
@@ -381,7 +381,6 @@
 				95F5BA420659481BB3BAF985 /* CDVJpegHeaderWriter.m in Sources */,
 				E83EFB9567B4444F9FB61AA1 /* CDVLogger.m in Sources */,
 				E49DE4C726BF41BC874CAD9B /* CDVNotification.m in Sources */,
-				84EFF62575674C13B489C8DB /* CDVStatusBar.m in Sources */,
 				64C25AC34B4342BA909D2A4B /* Toast+UIView.m in Sources */,
 				FF288D0830164807900E7BEC /* Toast.m in Sources */,
 				C117EB733EA54C3AA6D86305 /* AppDelegate+notification.m in Sources */,
@@ -391,6 +390,7 @@
 				5DC7E92DFA28473DBDE431CF /* CDVFile.m in Sources */,
 				79FD208AEE0148F484C77911 /* CDVLocalFilesystem.m in Sources */,
 				74B022EDBA9C49F19DA584A8 /* CDVAssetLibraryFilesystem.m in Sources */,
+				22D67420DA1540638701B02B /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
