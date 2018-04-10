@@ -70,6 +70,37 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:961089087180:android:b87a5d93f0abe4fe",
+        "android_client_info": {
+          "package_name": "com.alatheertech.marmaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961089087180-10dm8ko1e85ivgolcbj96star9ut16cc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmdT-i3hv1-2_hHx11FfQg9-VdnyE_p1g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:961089087180:android:b58a7a287c49e6b9",
         "android_client_info": {
           "package_name": "com.atheertech.marma"
