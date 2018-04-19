@@ -129,49 +129,87 @@ var app = {
     },
     setupPush: function () {
         console.log('calling push init');
-        var push = PushNotification.init({
-            "android": {},
-            "browser": {},
-            "ios": {
-                "sound": true,
-                "vibration": true,
-                "badge": true
-            },
-            "windows": {}
-        });
-        console.log('after init');
+        //var push = PushNotification.init({
+        //    "android": {},
+        //    "browser": {},
+        //    "ios": {
+        //        "sound": true,
+        //        "vibration": true,
+        //        "badge": true
+        //    },
+        //    "windows": {}
+        //});
+        //console.log('after init');
 
-        push.on('registration', function (data) {
-            console.log('registration event: ' + data.registrationId);
-            //alert('regId:'+  data.registrationId);
+        //push.on('registration', function (data) {
+        //    console.log('registration event: ' + data.registrationId);
+        //    //alert('regId:'+  data.registrationId);
+        //    var oldRegId = localStorage.getItem('registrationId');
+        //    if (oldRegId !== data.registrationId) {
+        //        // Save new registration ID
+        //        localStorage.setItem('registrationId', data.registrationId);
+        //        // Post registrationId to your app server as the value has changed
+        //    }
+
+        //    /*var parentElement = document.getElementById('registration');
+        //    var listeningElement = parentElement.querySelector('.waiting');
+        //    var receivedElement = parentElement.querySelector('.received');
+
+        //    listeningElement.setAttribute('style', 'display:none;');
+        //    receivedElement.setAttribute('style', 'display:block;');*/
+        //});
+
+        //push.on('error', function (e) {
+        //    console.log("push error = " + e.message);
+        //});
+
+        //push.on('notification', function (data) {
+        //    console.log('notification event');
+        //    alert('notification:' + data.message);
+        //    navigator.notification.alert(
+        //        data.message,         // message
+        //        null,                 // callback
+        //        data.title,           // title
+        //        'Ok'                  // buttonName
+        //    );
+        //});
+
+
+        FCMPlugin.getToken(function (token) {
+            //this is the fcm token which can be used
+            //to send notification to specific device 
+            console.log(token);
+            var oldRegId = localStorage.getItem('registrationId');
+                if (oldRegId !== data.registrationId) {
+                    // Save new registration ID
+                    localStorage.setItem('registrationId', data.registrationId);
+                    // Post registrationId to your app server as the value has changed
+                }
+        });
+        //FCMPlugin.onTokenRefresh( onTokenRefreshCallback(token) );
+        //Note that this callback will be fired everytime a new token is generated, including the first time.
+        FCMPlugin.onTokenRefresh(function (token) {
+            console.log(token);
             var oldRegId = localStorage.getItem('registrationId');
             if (oldRegId !== data.registrationId) {
                 // Save new registration ID
                 localStorage.setItem('registrationId', data.registrationId);
                 // Post registrationId to your app server as the value has changed
             }
-
-            /*var parentElement = document.getElementById('registration');
-            var listeningElement = parentElement.querySelector('.waiting');
-            var receivedElement = parentElement.querySelector('.received');
-
-            listeningElement.setAttribute('style', 'display:none;');
-            receivedElement.setAttribute('style', 'display:block;');*/
         });
-
-        push.on('error', function (e) {
-            console.log("push error = " + e.message);
-        });
-
-        push.on('notification', function (data) {
-            console.log('notification event');
-            alert('notification:' + data.message);
-            navigator.notification.alert(
-                data.message,         // message
-                null,                 // callback
-                data.title,           // title
-                'Ok'                  // buttonName
-            );
+        //FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
+        //Here you define your application behaviour based on the notification data.
+        FCMPlugin.onNotification(function (data) {
+            console.log(data);
+            //data.wasTapped == true means in Background :  Notification was received on device tray and tapped by the user.
+            //data.wasTapped == false means in foreground :  Notification was received in foreground. Maybe the user needs to be notified.
+            // if (data.wasTapped) {
+            //     //Notification was received on device tray and tapped by the user.
+            //     alert(JSON.stringify(data));
+            // } else {
+            //     //Notification was received in foreground. Maybe the user needs to be notified.
+            //     alert(JSON.stringify(data));
+            // }
         });
     }
     // Update DOM on a Received Event

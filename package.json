@@ -16,14 +16,10 @@
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.1",
     "cordova-plugin-whitelist": "~1.2.1",
-    "cordova-plugin-x-toast": "^2.6.2",
-    "phonegap-plugin-push": "^2.1.1"
+    "cordova-plugin-x-toast": "^2.6.2"
   },
   "cordova": {
     "plugins": {
-      "phonegap-plugin-push": {
-        "FCM_VERSION": "11.0.1"
-      },
       "cordova-plugin-console": {},
       "cordova-plugin-dialogs": {},
       "cordova-plugin-whitelist": {},
@@ -31,7 +27,8 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-camera": {},
       "cordova-plugin-file": {},
-      "cordova-plugin-statusbar": {}
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-fcm": {}
     },
     "platforms": [
       "android",

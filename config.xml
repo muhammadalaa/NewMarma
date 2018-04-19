@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.alatheertech.marmaapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.alatheertech.marmaapp" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>MarmaApp</name>
     <description>
         Application to make playgrounds reservations.
@@ -26,7 +26,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-installLocation" value="auto" />
     <preference name="CameraUsesGeolocation" value="false" />
-	<preference name="StatusBarBackgroundColor" value="#10414d" />
+    <preference name="StatusBarBackgroundColor" value="#10414d" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.3" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
@@ -35,9 +35,7 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <plugin name="cordova-plugin-camera" spec="^4.0.2" />
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
-    <plugin name="phonegap-plugin-push" spec="^2.1.1">
-        <variable name="FCM_VERSION" value="11.0.1" />
-    </plugin>
+    <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
     <gap:plugin name="cordova-plugin-x-toast" source="npm" />
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>100</string>

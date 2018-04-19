@@ -2,5 +2,5 @@
 platform :ios, '8.0'
 target 'D:\phonegap_projects\LastNewMarma\platforms\ios\MarmaApp' do
 	project 'D:\phonegap_projects\LastNewMarma\platforms\ios\MarmaApp.xcodeproj'
-	pod 'FirebaseMessaging', '~> 2.0.0'
+
 end

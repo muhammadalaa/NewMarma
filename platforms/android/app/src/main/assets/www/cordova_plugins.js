@@ -57,14 +57,6 @@ module.exports = [
     ]
   },
   {
-    "id": "phonegap-plugin-push.PushNotification",
-    "file": "plugins/phonegap-plugin-push/www/push.js",
-    "pluginId": "phonegap-plugin-push",
-    "clobbers": [
-      "PushNotification"
-    ]
-  },
-  {
     "id": "cordova-plugin-splashscreen.SplashScreen",
     "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
     "pluginId": "cordova-plugin-splashscreen",
@@ -252,6 +244,14 @@ module.exports = [
     "clobbers": [
       "window.StatusBar"
     ]
+  },
+  {
+    "id": "cordova-plugin-fcm.FCMPlugin",
+    "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+    "pluginId": "cordova-plugin-fcm",
+    "clobbers": [
+      "FCMPlugin"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -262,10 +262,10 @@ module.exports.metadata =
   "cordova-plugin-dialogs": "1.2.1",
   "cordova-plugin-whitelist": "1.2.2",
   "cordova-plugin-x-toast": "2.6.2",
-  "phonegap-plugin-push": "2.1.1",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-file": "6.0.1",
-  "cordova-plugin-statusbar": "2.4.1"
+  "cordova-plugin-statusbar": "2.4.1",
+  "cordova-plugin-fcm": "2.1.2"
 };
 // BOTTOM OF METADATA
 });

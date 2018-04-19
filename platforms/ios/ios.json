@@ -15,12 +15,7 @@
               "id": "config.xml"
             }
           ],
-          "UIBackgroundModes": [
-            {
-              "xml": "<array><string>remote-notification</string></array>",
-              "count": 1
-            }
-          ]
+          "UIBackgroundModes": []
         }
       },
       "config.xml": {
@@ -55,10 +50,6 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
@@ -69,11 +60,25 @@
             {
               "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"FCMPlugin\"><param name=\"ios-package\" value=\"FCMPlugin\" /></feature>",
+              "count": 1
             }
           ]
         }
       },
       "*-Debug.plist": {
+        "parents": {
+          "aps-environment": []
+        }
+      },
+      "*-Release.plist": {
+        "parents": {
+          "aps-environment": []
+        }
+      },
+      "*/Entitlements-Debug.plist": {
         "parents": {
           "aps-environment": [
             {
@@ -83,7 +88,7 @@
           ]
         }
       },
-      "*-Release.plist": {
+      "*/Entitlements-Release.plist": {
         "parents": {
           "aps-environment": [
             {
@@ -117,11 +122,11 @@
     "cordova-plugin-x-toast": {
       "PACKAGE_NAME": "com.alatheertech.marma"
     },
-    "phonegap-plugin-push": {
-      "PACKAGE_NAME": "com.alatheertech.marma"
-    },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.alatheertech.marma"
+    },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "com.alatheertech.marmaapp"
     }
   },
   "dependent_plugins": {},
@@ -372,19 +377,19 @@
       ]
     },
     {
-      "id": "phonegap-plugin-push.PushNotification",
-      "file": "plugins/phonegap-plugin-push/www/push.js",
-      "pluginId": "phonegap-plugin-push",
-      "clobbers": [
-        "PushNotification"
-      ]
-    },
-    {
       "id": "cordova-plugin-statusbar.statusbar",
       "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
       "pluginId": "cordova-plugin-statusbar",
       "clobbers": [
         "window.StatusBar"
+      ]
+    },
+    {
+      "id": "cordova-plugin-fcm.FCMPlugin",
+      "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+      "pluginId": "cordova-plugin-fcm",
+      "clobbers": [
+        "FCMPlugin"
       ]
     }
   ],
@@ -396,7 +401,7 @@
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-whitelist": "1.2.2",
     "cordova-plugin-x-toast": "2.6.2",
-    "phonegap-plugin-push": "2.1.1",
-    "cordova-plugin-statusbar": "2.4.1"
+    "cordova-plugin-statusbar": "2.4.1",
+    "cordova-plugin-fcm": "2.1.2"
   }
 }
